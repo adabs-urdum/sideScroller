@@ -1,0 +1,23 @@
+// Styles
+// name mixin after scss slide
+@mixin slide($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .slide {
+    scroll-snap-align: start;
+    height: 100%;
+    width: 100vw;
+    flex-shrink: 0;
+  }
+}
+
+// Add slide
+@include slide();
+
+// Add basic slide with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include slide(#{$Breakpoint});
+  }
+}
