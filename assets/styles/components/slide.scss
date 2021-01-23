@@ -9,6 +9,14 @@
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &:nth-child(odd) {
+      background: #0dcdff;
+    }
   }
 }
 

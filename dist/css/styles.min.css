@@ -466,7 +466,7 @@ main {
   position: relative;
   display: flex;
   height: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: auto;
 }
 
@@ -695,7 +695,7 @@ canvas {
     position: relative;
     display: flex;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: auto;
   }
   h1,
@@ -892,7 +892,7 @@ canvas {
     position: relative;
     display: flex;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: auto;
   }
   h1,
@@ -1089,7 +1089,7 @@ canvas {
     position: relative;
     display: flex;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: auto;
   }
   h1,
@@ -1286,7 +1286,7 @@ canvas {
     position: relative;
     display: flex;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: auto;
   }
   h1,
@@ -1483,7 +1483,7 @@ canvas {
     position: relative;
     display: flex;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: auto;
   }
   h1,
@@ -1670,6 +1670,14 @@ canvas {
   height: 100%;
   width: 100vw;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide:nth-child(odd) {
+  background: #0dcdff;
 }
 
 @media (min-width: 1980px) {
@@ -1678,6 +1686,13 @@ canvas {
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide:nth-child(odd) {
+    background: #0dcdff;
   }
 }
 
@@ -1687,6 +1702,13 @@ canvas {
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide:nth-child(odd) {
+    background: #0dcdff;
   }
 }
 
@@ -1696,6 +1718,13 @@ canvas {
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide:nth-child(odd) {
+    background: #0dcdff;
   }
 }
 
@@ -1705,6 +1734,13 @@ canvas {
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide:nth-child(odd) {
+    background: #0dcdff;
   }
 }
 
@@ -1714,6 +1750,661 @@ canvas {
     height: 100%;
     width: 100vw;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide:nth-child(odd) {
+    background: #0dcdff;
+  }
+}
+
+.collage {
+  position: relative;
+  width: 47.47475vw;
+  height: 40.75758vw;
+}
+
+.collage .collage {
+  width: 100%;
+  display: none;
+}
+
+.collage .face {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  z-index: 20;
+}
+
+.collage .code {
+  position: absolute;
+  top: 7%;
+  left: 30%;
+  width: 34%;
+  transform: rotate(-15deg);
+  z-index: 22;
+}
+
+.collage .ski1 {
+  position: absolute;
+  top: -16%;
+  left: 42%;
+  width: 9%;
+  transform: rotate(45deg);
+  z-index: 9;
+}
+
+.collage .ski2 {
+  position: absolute;
+  top: -15%;
+  left: 44%;
+  width: 9%;
+  transform: rotate(60deg);
+  z-index: 11;
+}
+
+.collage .board {
+  position: absolute;
+  top: 27%;
+  left: 21%;
+  width: 54%;
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+.collage .shiitake1 {
+  position: absolute;
+  top: 31.5%;
+  right: 55%;
+  width: 20%;
+  transform: rotate(-50deg);
+  transform-origin: left bottom;
+  z-index: 5;
+}
+
+.collage .shiitake2 {
+  position: absolute;
+  top: 39%;
+  right: 56%;
+  width: 12%;
+  transform: rotate(-77.6deg);
+  transform-origin: left bottom;
+  z-index: 11;
+}
+
+.collage .shiitake3 {
+  position: absolute;
+  top: 41%;
+  right: 47%;
+  width: 15%;
+  transform: rotate(-105deg);
+  transform-origin: left bottom;
+  z-index: 10;
+}
+
+.collage .chili1 {
+  position: absolute;
+  top: 39.5%;
+  left: 63.5%;
+  width: 33%;
+  transform: rotate(-31deg);
+  transform-origin: left bottom;
+  z-index: 8;
+}
+
+.collage .chili2 {
+  position: absolute;
+  top: 40.5%;
+  left: 56.5%;
+  width: 33%;
+  transform: rotate(-11.5deg);
+  transform-origin: left bottom;
+  z-index: 10;
+}
+
+.collage img {
+  opacity: 0;
+}
+
+.collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+  opacity: 1;
+}
+
+.collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+  width: 0;
+}
+
+@media (min-width: 1980px) {
+  .collage {
+    position: relative;
+    width: 940px;
+    height: 807px;
+  }
+  .collage .collage {
+    width: 100%;
+    display: none;
+  }
+  .collage .face {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    z-index: 20;
+  }
+  .collage .code {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 34%;
+    transform: rotate(-15deg);
+    z-index: 22;
+  }
+  .collage .ski1 {
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    width: 9%;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+  .collage .ski2 {
+    position: absolute;
+    top: -15%;
+    left: 44%;
+    width: 9%;
+    transform: rotate(60deg);
+    z-index: 11;
+  }
+  .collage .board {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    width: 54%;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+  .collage .shiitake1 {
+    position: absolute;
+    top: 31.5%;
+    right: 55%;
+    width: 20%;
+    transform: rotate(-50deg);
+    transform-origin: left bottom;
+    z-index: 5;
+  }
+  .collage .shiitake2 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+    width: 12%;
+    transform: rotate(-77.6deg);
+    transform-origin: left bottom;
+    z-index: 11;
+  }
+  .collage .shiitake3 {
+    position: absolute;
+    top: 41%;
+    right: 47%;
+    width: 15%;
+    transform: rotate(-105deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage .chili1 {
+    position: absolute;
+    top: 39.5%;
+    left: 63.5%;
+    width: 33%;
+    transform: rotate(-31deg);
+    transform-origin: left bottom;
+    z-index: 8;
+  }
+  .collage .chili2 {
+    position: absolute;
+    top: 40.5%;
+    left: 56.5%;
+    width: 33%;
+    transform: rotate(-11.5deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage img {
+    opacity: 0;
+  }
+  .collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    opacity: 1;
+  }
+  .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    width: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .collage {
+    position: relative;
+    width: 65.27778vw;
+    height: 56.04167vw;
+  }
+  .collage .collage {
+    width: 100%;
+    display: none;
+  }
+  .collage .face {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    z-index: 20;
+  }
+  .collage .code {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 34%;
+    transform: rotate(-15deg);
+    z-index: 22;
+  }
+  .collage .ski1 {
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    width: 9%;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+  .collage .ski2 {
+    position: absolute;
+    top: -15%;
+    left: 44%;
+    width: 9%;
+    transform: rotate(60deg);
+    z-index: 11;
+  }
+  .collage .board {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    width: 54%;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+  .collage .shiitake1 {
+    position: absolute;
+    top: 31.5%;
+    right: 55%;
+    width: 20%;
+    transform: rotate(-50deg);
+    transform-origin: left bottom;
+    z-index: 5;
+  }
+  .collage .shiitake2 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+    width: 12%;
+    transform: rotate(-77.6deg);
+    transform-origin: left bottom;
+    z-index: 11;
+  }
+  .collage .shiitake3 {
+    position: absolute;
+    top: 41%;
+    right: 47%;
+    width: 15%;
+    transform: rotate(-105deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage .chili1 {
+    position: absolute;
+    top: 39.5%;
+    left: 63.5%;
+    width: 33%;
+    transform: rotate(-31deg);
+    transform-origin: left bottom;
+    z-index: 8;
+  }
+  .collage .chili2 {
+    position: absolute;
+    top: 40.5%;
+    left: 56.5%;
+    width: 33%;
+    transform: rotate(-11.5deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage img {
+    opacity: 0;
+  }
+  .collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    opacity: 1;
+  }
+  .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    width: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .collage {
+    position: relative;
+    width: 91.79688vw;
+    height: 78.80859vw;
+  }
+  .collage .collage {
+    width: 100%;
+    display: none;
+  }
+  .collage .face {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    z-index: 20;
+  }
+  .collage .code {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 34%;
+    transform: rotate(-15deg);
+    z-index: 22;
+  }
+  .collage .ski1 {
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    width: 9%;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+  .collage .ski2 {
+    position: absolute;
+    top: -15%;
+    left: 44%;
+    width: 9%;
+    transform: rotate(60deg);
+    z-index: 11;
+  }
+  .collage .board {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    width: 54%;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+  .collage .shiitake1 {
+    position: absolute;
+    top: 31.5%;
+    right: 55%;
+    width: 20%;
+    transform: rotate(-50deg);
+    transform-origin: left bottom;
+    z-index: 5;
+  }
+  .collage .shiitake2 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+    width: 12%;
+    transform: rotate(-77.6deg);
+    transform-origin: left bottom;
+    z-index: 11;
+  }
+  .collage .shiitake3 {
+    position: absolute;
+    top: 41%;
+    right: 47%;
+    width: 15%;
+    transform: rotate(-105deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage .chili1 {
+    position: absolute;
+    top: 39.5%;
+    left: 63.5%;
+    width: 33%;
+    transform: rotate(-31deg);
+    transform-origin: left bottom;
+    z-index: 8;
+  }
+  .collage .chili2 {
+    position: absolute;
+    top: 40.5%;
+    left: 56.5%;
+    width: 33%;
+    transform: rotate(-11.5deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage img {
+    opacity: 0;
+  }
+  .collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    opacity: 1;
+  }
+  .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .collage {
+    position: relative;
+    width: 122.39583vw;
+    height: 105.07813vw;
+  }
+  .collage .collage {
+    width: 100%;
+    display: none;
+  }
+  .collage .face {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    z-index: 20;
+  }
+  .collage .code {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 34%;
+    transform: rotate(-15deg);
+    z-index: 22;
+  }
+  .collage .ski1 {
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    width: 9%;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+  .collage .ski2 {
+    position: absolute;
+    top: -15%;
+    left: 44%;
+    width: 9%;
+    transform: rotate(60deg);
+    z-index: 11;
+  }
+  .collage .board {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    width: 54%;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+  .collage .shiitake1 {
+    position: absolute;
+    top: 31.5%;
+    right: 55%;
+    width: 20%;
+    transform: rotate(-50deg);
+    transform-origin: left bottom;
+    z-index: 5;
+  }
+  .collage .shiitake2 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+    width: 12%;
+    transform: rotate(-77.6deg);
+    transform-origin: left bottom;
+    z-index: 11;
+  }
+  .collage .shiitake3 {
+    position: absolute;
+    top: 41%;
+    right: 47%;
+    width: 15%;
+    transform: rotate(-105deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage .chili1 {
+    position: absolute;
+    top: 39.5%;
+    left: 63.5%;
+    width: 33%;
+    transform: rotate(-31deg);
+    transform-origin: left bottom;
+    z-index: 8;
+  }
+  .collage .chili2 {
+    position: absolute;
+    top: 40.5%;
+    left: 56.5%;
+    width: 33%;
+    transform: rotate(-11.5deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage img {
+    opacity: 0;
+  }
+  .collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    opacity: 1;
+  }
+  .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    width: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .collage {
+    position: relative;
+    width: 250.66667vw;
+    height: 215.2vw;
+  }
+  .collage .collage {
+    width: 100%;
+    display: none;
+  }
+  .collage .face {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    z-index: 20;
+  }
+  .collage .code {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    width: 34%;
+    transform: rotate(-15deg);
+    z-index: 22;
+  }
+  .collage .ski1 {
+    position: absolute;
+    top: -16%;
+    left: 42%;
+    width: 9%;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+  .collage .ski2 {
+    position: absolute;
+    top: -15%;
+    left: 44%;
+    width: 9%;
+    transform: rotate(60deg);
+    z-index: 11;
+  }
+  .collage .board {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    width: 54%;
+    transform: rotate(15deg);
+    z-index: 2;
+  }
+  .collage .shiitake1 {
+    position: absolute;
+    top: 31.5%;
+    right: 55%;
+    width: 20%;
+    transform: rotate(-50deg);
+    transform-origin: left bottom;
+    z-index: 5;
+  }
+  .collage .shiitake2 {
+    position: absolute;
+    top: 39%;
+    right: 56%;
+    width: 12%;
+    transform: rotate(-77.6deg);
+    transform-origin: left bottom;
+    z-index: 11;
+  }
+  .collage .shiitake3 {
+    position: absolute;
+    top: 41%;
+    right: 47%;
+    width: 15%;
+    transform: rotate(-105deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage .chili1 {
+    position: absolute;
+    top: 39.5%;
+    left: 63.5%;
+    width: 33%;
+    transform: rotate(-31deg);
+    transform-origin: left bottom;
+    z-index: 8;
+  }
+  .collage .chili2 {
+    position: absolute;
+    top: 40.5%;
+    left: 56.5%;
+    width: 33%;
+    transform: rotate(-11.5deg);
+    transform-origin: left bottom;
+    z-index: 10;
+  }
+  .collage img {
+    opacity: 0;
+  }
+  .collage img.face, .collage img.ski1, .collage img.ski2, .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    opacity: 1;
+  }
+  .collage img.shiitake1, .collage img.shiitake2, .collage img.shiitake3 {
+    width: 0;
   }
 }
 

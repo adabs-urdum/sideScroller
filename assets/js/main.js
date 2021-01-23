@@ -3,6 +3,8 @@
 import "babel-polyfill";
 import GACE from "./googleAnalyticsCustomEvents";
 import SideScroller from "./component/SideScroller";
+import Collage from "./component/Collage";
+import gsap from "gsap";
 
 Array.prototype.shuffle = function () {
   return this.sort(function () {
@@ -24,5 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
   //   id: "UA-164327129-1",
   // });
 
-  new SideScroller();
+  const collageAnim = new Collage();
+
+  const sidescroller = new SideScroller({
+    snapSection: true,
+    snapCallback: () => {
+      // reset all anims but current slides one
+      Object.keys(collageAnim.timelines).forEach((tlKey) => {
+        const tl = collageAnim.timelines[tlKey];
+        if (tlKey !== sidescroller.currentSection) {
+          tl.pause(0);
+        }
+      });
+
+      // play current anim
+      collageAnim.playTimeline(sidescroller.currentSection);
+    },
+  });
 });
