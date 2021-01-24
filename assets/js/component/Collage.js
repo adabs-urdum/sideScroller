@@ -2,7 +2,6 @@ import gsap from "gsap";
 
 class Collage {
   constructor() {
-    console.log("new Collage");
     this.slides = [...document.querySelectorAll(".slide")];
     this.timelines = {};
 
@@ -45,7 +44,7 @@ class Collage {
                   duration: 6,
                   ease: "slow",
                 },
-                "0"
+                "<"
               )
               .fromTo(
                 ".shiitake2",
@@ -57,7 +56,7 @@ class Collage {
                   duration: 4,
                   ease: "slow",
                 },
-                "0.2"
+                "<+=0.2"
               )
               .fromTo(
                 ".shiitake3",
@@ -69,7 +68,7 @@ class Collage {
                   duration: 5,
                   ease: "slow",
                 },
-                "0.4"
+                "<+=0.4"
               )
               .fromTo(
                 ".board",
