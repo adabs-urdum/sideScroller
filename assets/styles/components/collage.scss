@@ -5,126 +5,188 @@
   $BS: getBaseSize($type);
 
   .collage {
-    position: relative;
-    width: $BS * 940;
-    height: $BS * 807;
+    &1 {
+      position: relative;
+      width: $BS * 940;
+      height: $BS * 807;
 
-    .collage {
-      width: 100%;
-      display: none;
-    }
-
-    .face {
-      position: absolute;
-      top: 45%;
-      left: 48%;
-      transform: translate(-50%, -50%);
-      width: 35%;
-      z-index: 20;
-    }
-
-    .code {
-      position: absolute;
-      top: 7%;
-      left: 30%;
-      width: 34%;
-      transform: rotate(-15deg);
-      z-index: 22;
-    }
-
-    .ski1 {
-      position: absolute;
-      top: -16%;
-      left: 42%;
-      width: 9%;
-      transform: rotate(45deg);
-      z-index: 9;
-    }
-
-    .ski2 {
-      position: absolute;
-      top: -15%;
-      left: 44%;
-      width: 9%;
-      transform: rotate(60deg);
-      z-index: 11;
-    }
-
-    .board {
-      position: absolute;
-      top: 27%;
-      left: 21%;
-      width: 54%;
-      transform: rotate(15deg);
-      z-index: 2;
-    }
-
-    .shiitake1 {
-      position: absolute;
-      top: 31.5%;
-      right: 55%;
-      width: 20%;
-      transform: rotate(-50deg);
-      transform-origin: left bottom;
-      z-index: 5;
-    }
-
-    .shiitake2 {
-      position: absolute;
-      top: 39%;
-      right: 56%;
-      width: 12%;
-      transform: rotate(-77.6deg);
-      transform-origin: left bottom;
-      z-index: 11;
-    }
-
-    .shiitake3 {
-      position: absolute;
-      top: 41%;
-      right: 47%;
-      width: 15%;
-      transform: rotate(-105deg);
-      transform-origin: left bottom;
-      z-index: 10;
-    }
-
-    .chili1 {
-      position: absolute;
-      top: 39.5%;
-      left: 63.5%;
-      width: 33%;
-      transform: rotate(-31deg);
-      transform-origin: left bottom;
-      z-index: 8;
-    }
-
-    .chili2 {
-      position: absolute;
-      top: 40.5%;
-      left: 56.5%;
-      width: 33%;
-      transform: rotate(-11.5deg);
-      transform-origin: left bottom;
-      z-index: 10;
-    }
-
-    img {
-      opacity: 0;
-
-      &.face,
-      &.ski1,
-      &.ski2,
-      &.shiitake1,
-      &.shiitake2,
-      &.shiitake3 {
-        opacity: 1;
+      .collage {
+        width: 100%;
+        display: none;
       }
 
-      &.shiitake1,
-      &.shiitake2,
-      &.shiitake3 {
-        width: 0;
+      .face {
+        position: absolute;
+        top: 45%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        width: 35%;
+        z-index: 20;
+      }
+
+      .code {
+        position: absolute;
+        top: 7%;
+        left: 30%;
+        width: 34%;
+        transform: rotate(-15deg);
+        z-index: 22;
+      }
+
+      .ski1 {
+        position: absolute;
+        top: -16%;
+        left: 42%;
+        width: 9%;
+        transform: rotate(45deg);
+        z-index: 9;
+      }
+
+      .ski2 {
+        position: absolute;
+        top: -15%;
+        left: 44%;
+        width: 9%;
+        transform: rotate(60deg);
+        z-index: 11;
+      }
+
+      .board {
+        position: absolute;
+        top: 27%;
+        left: 21%;
+        width: 54%;
+        transform: rotate(15deg);
+        z-index: 2;
+      }
+
+      .shiitake1 {
+        position: absolute;
+        top: 31.5%;
+        right: 55%;
+        width: 20%;
+        transform: rotate(-50deg);
+        transform-origin: left bottom;
+        z-index: 5;
+      }
+
+      .shiitake2 {
+        position: absolute;
+        top: 39%;
+        right: 56%;
+        width: 12%;
+        transform: rotate(-77.6deg);
+        transform-origin: left bottom;
+        z-index: 11;
+      }
+
+      .shiitake3 {
+        position: absolute;
+        top: 41%;
+        right: 47%;
+        width: 15%;
+        transform: rotate(-105deg);
+        transform-origin: left bottom;
+        z-index: 10;
+      }
+
+      .chili1 {
+        position: absolute;
+        top: 39.5%;
+        left: 63.5%;
+        width: 33%;
+        transform: rotate(-31deg);
+        transform-origin: left bottom;
+        z-index: 8;
+      }
+
+      .chili2 {
+        position: absolute;
+        top: 40.5%;
+        left: 56.5%;
+        width: 33%;
+        transform: rotate(-11.5deg);
+        transform-origin: left bottom;
+        z-index: 10;
+      }
+
+      img {
+        opacity: 0;
+
+        &.face,
+        &.ski1,
+        &.ski2,
+        &.shiitake1,
+        &.shiitake2,
+        &.shiitake3 {
+          opacity: 1;
+        }
+
+        &.shiitake1,
+        &.shiitake2,
+        &.shiitake3 {
+          width: 0;
+        }
+      }
+    }
+
+    &2 {
+      position: relative;
+      width: $BS * 1024;
+      height: $BS * 1024;
+
+      .stem {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transform-origin: center bottom;
+        filter: drop-shadow($BS * -3 $BS * -3 $BS * 0 hsl(0, 26%, 34%))
+          drop-shadow($BS * 3 $BS * 3 $BS * 0 rgb(27, 16, 16));
+      }
+
+      .monkey {
+        position: absolute;
+        bottom: 35%;
+        left: 45%;
+        transform: translateX(-50%) scale(0.4) rotate(-20deg);
+      }
+
+      .bush {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: drop-shadow($BS * -3 $BS * -3 $BS * 0 #23e47a)
+          drop-shadow($BS * 3 $BS * 3 $BS * 0 rgb(19, 82, 47));
+        &--1 {
+          left: 50%;
+          bottom: 50%;
+        }
+        &--2 {
+          left: 45%;
+          bottom: 55%;
+        }
+        &--3 {
+          left: 33%;
+          bottom: 52%;
+        }
+        &--4 {
+          left: 52%;
+          bottom: 60%;
+        }
+        &--5 {
+          left: 36%;
+          bottom: 60%;
+        }
+        &--6 {
+          left: 60%;
+          bottom: 67%;
+        }
+        &--7 {
+          left: 64%;
+          bottom: 54%;
+        }
       }
     }
   }

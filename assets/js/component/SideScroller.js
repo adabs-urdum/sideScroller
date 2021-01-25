@@ -16,6 +16,7 @@ class SideScroller {
 
   addEventListeners = () => {
     window.addEventListener("wheel", this.windowOnWheel);
+    window.addEventListener("resize", this.setCurrentSection);
 
     this.scrollContainer.addEventListener("touchstart", () => {
       this.touchEnded = false;

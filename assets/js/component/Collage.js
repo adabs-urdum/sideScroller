@@ -135,9 +135,10 @@ class Collage {
                 },
                 {
                   rotate: 45,
-                  duration: 40,
+                  duration: 10,
                   repeat: -1,
-                  ease: "slow",
+                  ease: "bounce",
+                  yoyo: true,
                 },
                 "0"
               )
@@ -148,15 +149,75 @@ class Collage {
                 },
                 {
                   rotate: 60,
-                  duration: 40,
+                  duration: 10,
                   repeat: -1,
-                  ease: "slow",
+                  ease: "bounce",
+                  yoyo: true,
                 },
                 "0"
               );
             break;
           case 2:
-            console.log("case2");
+            tl.addLabel("slide2", 0)
+              .fromTo(
+                ".stem",
+                {
+                  scale: 0.1,
+                  xPercent: -50,
+                  opacity: 0,
+                },
+                {
+                  duration: 1,
+                  scale: 1,
+                  opacity: 1,
+                  ease: "elastic",
+                }
+              )
+              .fromTo(
+                ".bush",
+                {
+                  scale: 0.1,
+                  opacity: 0,
+                  xPercent: -50,
+                },
+                {
+                  duration: 0.5,
+                  scale: 1,
+                  opacity: 1,
+                  ease: "back",
+                  stagger: 0.2,
+                },
+                "0.5"
+              )
+              .fromTo(
+                ".monkey",
+                {
+                  opacity: 0,
+                  yPercent: 5,
+                  xPercent: -50,
+                  scale: 0.3,
+                },
+                {
+                  opacity: 1,
+                  yPercent: 0,
+                  xPercent: -50,
+                  scale: 0.4,
+                },
+                ">"
+              )
+              .fromTo(
+                ".monkey",
+                {
+                  rotate: -20,
+                },
+                {
+                  rotate: -10,
+                  duration: 0.5,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: "none",
+                }
+              );
             break;
           default:
             console.log("default");
